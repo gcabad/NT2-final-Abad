@@ -3,11 +3,11 @@
   <section class="src-components-conversor-temp">
     <h1>Conversor de Temperatura</h1>
     <hr>
-    <p>Ingrese Temperatura °C <input type="text" v-model="celsius" ></p>
+    <div>Ingrese Temperatura °C <input type="text" v-model="celsius" ></div>
     <br>
-    <div :style="getColor(this.celsius)"> Conv Temperatura °F {{ calcularTemp.fahrenheit }} </div>
-    <div :style="getColor(this.celsius)">Conv Temperatura °K {{ calcularTemp.kelvin }} </div>
-
+    <div> Conv Temperatura °F: <p :style="getColor(this.celsius)"> {{ calcularTemp.fahrenheit }} </p> </div>
+    <div>Conv Temperatura °K: <p :style="getColor(this.celsius)"> {{ calcularTemp.kelvin }} </p> </div>
+    <br>
     <p>Respuestas: 1:c 2:b 3:c 4:a 5:b </p>
 
   </section>
@@ -65,5 +65,7 @@
 </script>
 
 <style scoped lang="css">
-
+  p {
+    display: inline;
+  }
 </style>
